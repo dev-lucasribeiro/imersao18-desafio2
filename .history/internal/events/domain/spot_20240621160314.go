@@ -1,10 +1,7 @@
 package domain
 
-import (
-	"errors"
+import "errors"
 
-	"github.com/google/uuid"
-)
 
 
 var (

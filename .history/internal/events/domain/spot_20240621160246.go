@@ -1,18 +1,6 @@
 package domain
 
-import (
-	"errors"
-
-	"github.com/google/uuid"
-)
-
-
-var (
-	ErrInvalidSpotNumber   = errors.New("invalid spot number")
-	ErrSpotNotFound        = errors.New("spot not found")
-	ErrSpotAlreadyReserved = errors.New("spot already reserved")
-)
-
+import "errors"
 
 type Spot struct {
 	ID       string

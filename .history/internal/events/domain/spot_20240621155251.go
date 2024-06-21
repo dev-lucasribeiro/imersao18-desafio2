@@ -1,18 +1,6 @@
 package domain
 
-import (
-	"errors"
-
-	"github.com/google/uuid"
-)
-
-
-var (
-	ErrInvalidSpotNumber   = errors.New("invalid spot number")
-	ErrSpotNotFound        = errors.New("spot not found")
-	ErrSpotAlreadyReserved = errors.New("spot already reserved")
-)
-
+import "errors"
 
 type Spot struct {
 	ID       string
@@ -57,13 +45,4 @@ func NewSpot(event *Event, name string) (*Spot, error) {
 		return nil, err
 	}
 	return spot, nil
-}
-
-func (s *Spot) Reserve(ticketID string) error {
-	if s.Status == SpotStatusSold {
-		return ErrSpotAlreadyReserved
-	}
-	s.Status = SpotStatusSold
-	s.TicketID = ticketID
-	return nil
 }

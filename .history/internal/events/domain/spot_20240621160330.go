@@ -1,6 +1,6 @@
 package domain
 
-import (
+import "(
 	"errors"
 
 	"github.com/google/uuid"
