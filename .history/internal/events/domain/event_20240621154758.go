@@ -1,9 +1,6 @@
 package domain
 
-import (
-	"errors"
-	"time"
-)
+import "time"
 
 type Event struct {
 	ID           string
@@ -32,21 +29,4 @@ const (
 )
 
 func (e *Event) Validate() error {
-	if e.Name == "" {
-		return errors.New("event name is required")
-	}
-
-	if e.Date.Before(time.Now()) {
-		return errors.New("event date must be in the future")
-	}
-
-	if e.Capacity <= 0 {
-		return errors.New("event capacity must be greater than zero")
-	}
-
-	if e.Price <= 0 {
-		return errors.New("event price must be greater than zero")
-	}
-
-	return nil
-}
+	

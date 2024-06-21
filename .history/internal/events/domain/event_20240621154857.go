@@ -40,13 +40,5 @@ func (e *Event) Validate() error {
 		return errors.New("event date must be in the future")
 	}
 
-	if e.Capacity <= 0 {
-		return errors.New("event capacity must be greater than zero")
-	}
-
-	if e.Price <= 0 {
-		return errors.New("event price must be greater than zero")
-	}
-
 	return nil
 }
