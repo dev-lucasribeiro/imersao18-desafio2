@@ -13,8 +13,8 @@ type Ticket struct {
 type TicketKind string
 
 const (
-	TicketKindHalf TicketKind = "half" // Half-price
-	TicketKindFull TicketKind = "full" // Full-price
+	TicketKindHalf TicketKind = "half" // Half-price ticket
+	TicketKindFull TicketKind = "full" // Full-price ticket
 )
 
 func IsValidTicketKind(ticketKind TicketKind) bool {
